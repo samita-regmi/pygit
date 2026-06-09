@@ -5,6 +5,7 @@ from commit import commit
 from log import log
 from checkout import checkout
 from status import status
+from diff import diff
 
 command = sys.argv[1]
 
@@ -23,3 +24,6 @@ elif command == "checkout":
     checkout(short_hash)
 elif command == "status":
     status()
+elif command == "diff":
+    filename = sys.argv[2]
+    diff(filename)
