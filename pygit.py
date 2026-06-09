@@ -4,6 +4,7 @@ from add import add
 from commit import commit
 from log import log
 from checkout import checkout
+from status import status
 
 command = sys.argv[1]
 
@@ -20,3 +21,5 @@ elif command =="log":
 elif command == "checkout":
     short_hash = sys.argv[2]
     checkout(short_hash)
+elif command == "status":
+    status()
